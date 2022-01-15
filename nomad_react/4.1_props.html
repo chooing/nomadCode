@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script src="https://unpkg.com/react@17.0.2/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    function Btn({ inText, big }) {
+      // function Btn(props) => {props.inText}
+      // => console.log(props);
+      return (
+        <button
+          style={{
+            backgroundColor: "SlateBlue",
+            color: "gold",
+            padding: "10px 20px",
+            border: 0,
+            borderRadius: 10,
+            fontSize: big ? 25 : 16,
+          }}
+        >
+          {inText}
+        </button>
+      );
+    }
+
+    const App = () => {
+      return (
+        <div>
+          <Btn inText="Save Chages" big={true} />
+          <Btn inText="Continue" big={false} />
+        </div>
+      );
+    };
+
+    const root = document.getElementById("root");
+    ReactDOM.render(<App />, root);
+  </script>
+</html>
