@@ -39,12 +39,3 @@ function handleToDoSubmit(event) {
   paintToDo(newTodo);
 }
 todoForm.addEventListener("submit", handleToDoSubmit);
-
-function sayHello() {
-  console.log("Hello");
-}
-const savedTodos = localStorage.getItem(TODOS_KEY);
-if (savedTodos) {
-  const parseTodos = JSON.parse(savedTodos);
-  parseTodos.forEach(sayHello);
-}
