@@ -16,8 +16,9 @@ const quotes = [
     kor: "뜻이 있는 곳엔 길이 있다.",
   },
   {
-    quote: "This is how life is.",
-    kor: "이런 게 인생이지요.",
+    quote:
+      "Life is like a box of chocolates, You never know what you're gonna get.",
+    kor: "인생은 마치 초콜릿 상자와도 같다, 당신이 무엇을 얻게 될지 모르기 때문이다.",
   },
   {
     quote: "He can do, she can do, why not me?",
@@ -28,8 +29,8 @@ const quotes = [
     kor: "당신이 하는 걸 사랑하세요.",
   },
   {
-    quote: "Live live there is no tomorrow.",
-    kor: "내일이 없는 것처럼 사세요.",
+    quote: "I don't want a perfect life, I want a happy life.",
+    kor: "완벽한 인생을 원하지 않고 행복한 삶을 원합니다.",
   },
   {
     quote: "Life is all about timing.",

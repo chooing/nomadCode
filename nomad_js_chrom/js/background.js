@@ -1,5 +1,9 @@
-const images = ["0.jpg", "1.jpg", "2.jpg"];
+const images = ["bg-0", "bg-1", "bg-2", "bg-3", "bg-4", "bg-5"];
 const chosenImage = images[Math.floor(Math.random() * images.length)];
-const bgImg = document.createElement("img");
-bgImg.src = `img/${chosenImage}`;
-document.body.append(bgImg);
+const bgImg = document.querySelector("#textContainer");
+
+bgImg.classList.remove();
+bgImg.classList.add(chosenImage);
+
+// bgImg.src = `img/${chosenImage}`;
+// document.body.append(bgImg);

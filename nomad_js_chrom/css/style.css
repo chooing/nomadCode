@@ -1,3 +1,285 @@
+:root {
+  --changeColor: darkcyan;
+  /*steelblue darkcyan goldenrod indianred*/
+  --darkMode: #333;
+}
+
 .hidden {
   display: none;
+}
+.empty {
+  color: rgba(255, 255, 255, 0.472);
+  text-align: center;
+  justify-items: center;
+  font-size: 60px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  padding-top: 50px;
+  box-sizing: border-box;
+}
+
+body,
+input {
+  font-family: "Poppins", sans-serif;
+}
+.bg-0 {
+  background-image: url(../img/0.jpg);
+}
+.bg-1 {
+  background-image: url(../img/1.jpg);
+}
+.bg-2 {
+  background-image: url(../img/2.jpg);
+}
+.bg-3 {
+  background-image: url(../img/3.jpg);
+}
+.bg-4 {
+  background-image: url(../img/4.jpg);
+}
+.bg-5 {
+  background-image: url(../img/5.jpg);
+}
+/*change setting */
+
+#wrap {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background-color: var(--darkMode);
+}
+/* #wrap */
+
+#todoContainer {
+  width: 560px;
+  height: 100vh;
+  padding: 50px;
+  box-sizing: border-box;
+  background-color: var(--changeColor);
+  border-radius: 0px 0px 100px 0px;
+}
+#todoContainer h2 {
+  font-size: 50px;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+#todoForm {
+  width: 100%;
+}
+#todoForm input {
+  width: 100%;
+  padding: 20px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 20px;
+  color: #fff;
+
+  border: 3px dotted #fff;
+  background-color: transparent;
+  word-break: break-all;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+#todoForm input::placeholder {
+  color: #fff;
+}
+
+#todoList {
+  width: 100%;
+  padding-top: 20px;
+  height: 662px;
+  overflow: auto;
+}
+
+#todoList li {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 15px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 20px;
+  color: #fff;
+
+  border: 3px solid #fff;
+  box-sizing: border-box;
+  border-radius: 20px;
+  position: relative;
+}
+#todoList li span {
+  display: block;
+  width: 95%;
+  font-size: 20px;
+  line-height: 1.5;
+  word-break: break-all;
+}
+
+#todoList li button {
+  width: 25px;
+  height: 25px;
+
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: bold;
+  color: var(--changeColor);
+
+  border: none;
+  background-color: #fff;
+  border-radius: 20px;
+
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+/* todo */
+
+#contents {
+  width: 1360px;
+  height: 100vh;
+  padding: 50px 100px;
+  box-sizing: border-box;
+  background-color: var(--darkMode);
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+#textContainer {
+  width: 100%;
+  height: 45%;
+  padding: 40px;
+  box-sizing: border-box;
+  background-color: #555;
+  background-repeat: no-repeat;
+  background-position: 50% 55%;
+  background-blend-mode: multiply;
+  border-radius: 20px;
+  color: #fff;
+  position: relative;
+}
+
+#loginForm {
+  width: 100%;
+}
+
+#loginForm input {
+  border: none;
+  background-color: transparent;
+  font-size: 60px;
+  font-weight: 600;
+  color: #fff;
+}
+#loginForm input::placeholder {
+  color: #fff;
+}
+#loginForm input:first-child {
+  width: 650px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  border-bottom: 3px solid #fff;
+}
+#loginForm input:last-child {
+  margin-left: 20px;
+}
+#loginForm input:last-child:hover {
+  color: var(--changeColor);
+}
+
+#greeting {
+  font-size: 60px;
+  line-height: 1.3;
+  font-weight: 600;
+}
+#greeting span {
+  display: inline-block;
+  color: var(--changeColor);
+}
+
+#quotes {
+  font-size: 20px;
+  text-align: right;
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+}
+#quotes span {
+  display: block;
+  padding-bottom: 10px;
+  font-weight: 200;
+}
+#quotes span:first-child {
+  font-weight: 400;
+}
+#quotes span:last-child {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+/*textContainer  */
+
+#calenderContainer {
+  width: 47%;
+  height: 50%;
+  background: rgba(255, 255, 255, 0.575);
+  border-radius: 20px;
+}
+
+#myWrap {
+  width: 50%;
+  height: 50%;
+  display: flex;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+
+#todayContainer {
+  width: 100%;
+  height: 47%;
+  padding: 10%;
+  box-sizing: border-box;
+  background-color: var(--changeColor);
+  color: #fff;
+  display: flex;
+  align-content: space-between;
+  flex-wrap: wrap;
+  border-radius: 20px;
+}
+.clock {
+  width: 50%;
+  text-align: right;
+  padding-right: 20px;
+  border-right: 2px solid #fff;
+}
+#clock {
+  font-size: 60px;
+  font-weight: 200;
+}
+#day {
+  padding-top: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+#weather {
+  padding-left: 20px;
+}
+#weather span {
+  display: block;
+}
+#weather span:first-child {
+  font-size: 60px;
+  font-weight: 700;
+}
+#weather span:last-child {
+  padding-top: 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+#bookContainer {
+  width: 100%;
+  height: 45%;
+  border-radius: 20px;
+  border: 5px solid #000;
+  border-color: var(--changeColor);
 }

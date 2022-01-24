@@ -26,7 +26,7 @@ function paintToDo(newTodoObj) {
   ElSpan.innerText = newTodoObj.text;
 
   const ElButton = document.createElement("button");
-  ElButton.innerText = "❌";
+  ElButton.innerText = "X";
   ElButton.addEventListener("click", deleteToDo);
 
   ElLi.append(ElSpan, ElButton);
