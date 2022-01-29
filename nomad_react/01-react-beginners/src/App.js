@@ -1,48 +1,33 @@
-import Button from "./Button";
-import styled from "./App.module.css";
 import { useState, useEffect } from "react";
 
 function App() {
-  const [counter, setCounter] = useState(0);
-  const onClick = () => {
-    setCounter((prevCounter) => prevCounter + 1);
-  };
-  //click=>counter++
+  const [showing, setShowing] = useState(false);
+  const onClick = () => setShowing((prevVal) => !prevVal);
 
-  const [keyeord, setKeyword] = useState("");
-  const onChange = (event) => {
-    setKeyword(event.target.value);
-  };
-  //serch input onchange
+  function Hello() {
+    /* 풀이 설명
+    function destroyedFnc() {console.log("destroyed!");}
+    function effectFnc() { 
+      console.log("created");
+      return destroyedFnc;
+    }
+    useEffect(effectFnc, []);
+    */
 
-  useEffect(() => {
-    console.log("I run only once.");
-    //console.log("call API");
-  }, []);
-  useEffect(() => {
-    console.log("I run when 'keyword' changes.");
-    //if (keyeord !== "" && keyeord.length > 5) { console.log("i search", keyeord);}
-  }, [keyeord]);
-  useEffect(() => {
-    console.log("I run when 'counter' changes.");
-  }, [counter]);
-  useEffect(() => {
-    console.log("I run when 'keyword & counter' changes.");
-  }, [keyeord, counter]);
+    useEffect(() => {
+      console.log("hi!");
+      return () => {
+        console.log("bye~");
+      };
+    }, []);
 
-  //useEffect
+    return <h1>Hello</h1>;
+  }
 
   return (
     <div>
-      <h1 className={styled.title}>Welcome Back!</h1>
-      <input
-        value={keyeord}
-        onChange={onChange}
-        type="text"
-        placeholder="search here"
-      />
-      <p>{counter}</p>
-      <button onClick={onClick}>Click me</button>
+      {showing ? <Hello /> : null}
+      <button onClick={onClick}>{showing ? "Hide" : "Show"}</button>
     </div>
   );
 }
