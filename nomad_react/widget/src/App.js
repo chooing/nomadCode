@@ -1,5 +1,11 @@
+import ToDo from "./toDo";
+
 function App() {
-  return <div></div>;
+  return (
+    <div>
+      <ToDo />
+    </div>
+  );
 }
 
 export default App;
