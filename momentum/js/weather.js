@@ -10,9 +10,7 @@ const weatherIcon = {
   "50n": "water",
 };
 
-//byul91oh.tistory.com/31 [개꼬 [: 개발하는 꼬바리]]
-
-출처: https: function onGeoOk(position) {
+function onGeoOk(position) {
   const lat = position.coords.latitude; //위도
   const lon = position.coords.longitude; //경도
 
